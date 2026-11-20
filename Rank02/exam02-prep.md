@@ -36,21 +36,21 @@ int main(int argc, char **argv)
 {
     int i = 0;
 
-    if (argc != 2)      // If num of parameters is not 1, display newline and return
+    if (argc != 2)  // If NOT 1 param, write newline and return
     {
         write(1, "\n", 1);
         return (0);
     }
-    while (argv[1][i] != '\0')      // Iterate through characters
+    while (argv[1][i] != '\0')  // Iterate through characters
     {
-        if (argv[1][i] == 'a')      // If 'a' is found, display it and exit loop
+        if (argv[1][i] == 'a')  // If 'a', write "a" and exit loop
         {
             write(1, "a", 1);
             break;
         }
         i++;
     }
-    write(1, "\n", 1);      // Always display a newline at the end
+    write(1, "\n", 1);  // Always write a newline at the end
     return (0);
 }
 ```
@@ -84,14 +84,14 @@ j'aime le savon\$
 int main(int argc, char **argv)
 {
     int i = 0;
-if (argc < 2)       // If less than 1 param
+if (argc < 2)   // If LESS than 1 param
     {
         write(1, "\n", 1);
         return (0);
     }
-    while (argv[1][i] != '\0')      // Iterate through 1st param
+    while (argv[1][i] != '\0')  // Iterate through 1st param
     {
-        write(1, &argv[1][i], 1);       // Write current character
+        write(1, &argv[1][i], 1);   // Write current character
         i++;
     }
     write(1, "\n", 1);
@@ -129,12 +129,12 @@ int main(int argc, char **argv)
 {
     int i = 0;
 
-    if (argc < 2)       // If less than 1 param
+    if (argc < 2)   // If LESS than 1 param
     {
         write(1, "\n", 1);
         return (0);
     }
-    while (argv[argc - 1][i] != '\0')       // Last param is argv[argc - 1]
+    while (argv[argc - 1][i] != '\0')   // Last param is argv[argc - 1]
     {
         write(1, &argv[argc - 1][i], 1);
         i++;
@@ -165,7 +165,7 @@ z\$
 #include <unistd.h>
 int main(void)
 {
-    write(1, "z\n", 2);     // Write 2 bytes, not 1
+    write(1, "z\n", 2); // Write 2 bytes, not 1
     return (0);
 }
 ```
@@ -207,7 +207,7 @@ int	main(int argc, char **argv)
 {
 	int	i = 0;
 
-	if (argc != 2)	// If not 1 param
+	if (argc != 2)  // If NOT 1 param
 	{
 		write(1, "\n", 1);
 		return (0);
@@ -223,7 +223,7 @@ int	main(int argc, char **argv)
 		write(1, &argv[1][i], 1);
 		i++;
 	}
-	write(1, "\n", 1);      // Always write a newline at the end
+	write(1, "\n", 1);  // Always write a newline at the end
 	return (0);
 }
 ```
