@@ -1,10 +1,12 @@
 # Exam Rank 02 - Preparation Guide
 
-**Compile:** `cc -Wall -Wextra -Werror <file.c>`
-**Test:** `./a.out [arguments...]`
+**Compile:** `cc -Wall -Wextra -Werror <name.c> -o name`
+**Test:** `./name [arguments...]`
 
-## Level 1
+---
+## Level 0
 
+---
 ### aff_a
 
 **Expected files:** aff_a.c | **Allowed functions:** write
@@ -53,6 +55,7 @@ int main(int argc, char **argv)
 }
 ```
 
+---
 ### aff_first_param
 
 **Expected files:** aff_first_param.c | **Allowed functions:** write
@@ -81,8 +84,7 @@ j'aime le savon\$
 int main(int argc, char **argv)
 {
     int i = 0;
-
-    if (argc < 2)       // If less than 1 param
+if (argc < 2)       // If less than 1 param
     {
         write(1, "\n", 1);
         return (0);
@@ -97,6 +99,7 @@ int main(int argc, char **argv)
 }
 ```
 
+---
 ### aff_last_param
 
 **Expected files:** aff_last_param.c | **Allowed functions:** write
@@ -141,7 +144,36 @@ int main(int argc, char **argv)
 }
 ```
 
-### X
+---
+### aff_z
+
+**Expected files:** aff_z.c | **Allowed functions:** write
+
+Write a program that takes a string, and displays the character 'z' followed by a newline.
+
+Example:
+\$> ./aff_z "abc" | cat -e
+z\$
+\$> ./aff_z | cat -e
+z\$
+
+#### Proposed solution
+
+1. Always write "z\n"
+
+```
+#include <unistd.h>
+int main(void)
+{
+    write(1, "z\n", 2);     // Write 2 bytes, not 1
+    return (0);
+}
+```
+
+---
+### first_word
+
+#todo
 
 **Expected files:** X.c | **Allowed functions:** X
 
@@ -155,21 +187,52 @@ X
 X
 ```
 
+---
+### fizzbuzz
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_putstr
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
 ### ft_strcpy
 
-| **File**    | ft_strcpy.c |
-| :---------- | :---------- |
-| **Allowed** | none        |
+#todo
 
-Reproduce the behavior of the function strcpy (man strcpy).
+**Expected files:** X.c | **Allowed functions:** X
 
-Your function must be declared as follows:
+X
 
-```
-char *ft_strcpy(char *s1, char *s2);
-```
+#### Proposed solution
 
-#### Solution
+1. X
 
 ```
 char	*ft_strcpy(char	*dest, char	*src)
@@ -186,3 +249,965 @@ char	*ft_strcpy(char	*dest, char	*src)
 	return (dest);
 }
 ```
+---
+### ft_strlen
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_swap
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### maff_alpha
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### maff_revalpha
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### repeat_alpha
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### rev_print
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### rot_13
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### rotone
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### search_and_replace
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ulstr
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+
+---
+## Level 1
+---
+### alpha_mirror
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### camel_to_snake
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### do_op
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_atoi
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_strchr
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_strcmp
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_strcspn
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_strdup
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_strpbrk
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_strrev
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_strspn
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### inter
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### is_power_of_2
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### last_word
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### max
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### print_bits
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### reverse_bits
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### snake_to_camel
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### swap_bits
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### union
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### wdmatch
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+
+---
+## Level 2
+---
+### add_prime_sum
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### epur_str
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### expand_str
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_atoi_base
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_list_size
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_range
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_rrange
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### hidenp
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### lcm
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### paramsum
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### pgcd
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### print_hex
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### rstr_capitalizer
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### str_capitalizer
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### tab_mult
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+
+---
+## Level 3
+---
+### flood_fill
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### fprime
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_itoa
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_list_foreach
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_list_remove_if
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### ft_split
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### rev_wstr
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### rostring
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### sort_int_tab
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+---
+### sort_list
+
+#todo
+
+**Expected files:** X.c | **Allowed functions:** X
+
+X
+
+#### Proposed solution
+
+1. X
+
+```
+X
+```
+
+
