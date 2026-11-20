@@ -173,18 +173,59 @@ int main(void)
 ---
 ### first_word
 
-#todo
+**Expected files:** first_word.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string and displays its first word, followed by a newline.
 
-X
+A word is a section of string delimited by spaces/tabs or by the start/end of the string.
+
+If the number of parameters is not 1, or if there are no words, simply display a newline.
+
+Examples:
+\$> ./first_word "FOR PONY" | cat -e
+FOR\$
+\$> ./first_word "this ... is sparta, then again, maybe not" | cat -e
+this\$
+\$> ./first_word " " | cat -e
+\$
+\$> ./first_word "a" "b" | cat -e
+\$
+\$> ./first_word " lorem,ipsum " | cat -e
+lorem,ipsum\$
 
 #### Proposed solution
 
-1. X
+1. If the number of parameters is not 1, write newline and return
+2. Iterate through leading spaces/tabs, skipping them --> when the loop stops, we're either at the first word or at the end of the string
+3. Write each character of the word; stop when we find either a space/tab or the end of the string
+4. Always write a newline at the end
+
 
 ```
-X
+#include <unistd.h>
+int	main(int argc, char **argv)
+{
+	int	i = 0;
+
+	if (argc != 2)	// If not 1 param
+	{
+		write(1, "\n", 1);
+		return (0);
+	}
+	// Skip leading spaces/tabs - reach 1st word or end of string
+	while (argv[1][i] == ' ' || argv[1][i] == '\t')
+	{
+		i++;
+	}
+	// Write each character until a space/tab or end of string
+	while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
+	{
+		write(1, &argv[1][i], 1);
+		i++;
+	}
+	write(1, "\n", 1);      // Always write a newline at the end
+	return (0);
+}
 ```
 
 ---
