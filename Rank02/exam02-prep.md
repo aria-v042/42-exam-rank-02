@@ -30,7 +30,7 @@ a\$
     - If the 'a' character is found, write "a" and exit the loop
 3. Always write a newline at the end
 
-```
+```c
 #include <unistd.h>
 int main(int argc, char **argv)
 {
@@ -79,7 +79,7 @@ j'aime le savon\$
     - Write each character to the standard output
 3. Always write a newline at the end
 
-```
+```c
 #include <unistd.h>
 int main(int argc, char **argv)
 {
@@ -123,7 +123,7 @@ j'aime le savon\$
     - Write each character to the standard output
 3. Always write a newline at the end
 
-```
+```c
 #include <unistd.h>
 int main(int argc, char **argv)
 {
@@ -161,7 +161,7 @@ z\$
 
 1. Always write "z\n"
 
-```
+```c
 #include <unistd.h>
 int main(void)
 {
@@ -201,7 +201,7 @@ lorem,ipsum\$
 4. Always write a newline at the end
 
 
-```
+```c
 #include <unistd.h>
 int	main(int argc, char **argv)
 {
