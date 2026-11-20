@@ -4,7 +4,7 @@ Level 0
 - [x] aff_a
 - [x] aff_first_param
 - [x] aff_last_param
-- [ ] aff_z
+- [x] aff_z
 - [ ] first_word
 - [ ] fizzbuzz
 - [ ] ft_putstr
