@@ -231,13 +231,27 @@ int	main(int argc, char **argv)
 ---
 ### fizzbuzz
 
-#todo
+**Expected files:** fizzbuzz.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that prints the numbers from 1 to 100, each separated by a newline.
 
-X
+If the number is a multiple of 3, it prints 'fizz' instead.
+If the number is a multiple of 5, it prints 'buzz' instead.
+If the number is both a multiple of 3 and a multiple of 5, it prints 'fizzbuzz' instead.
+
+Example:
+\$>./fizzbuzz
+1
+2
+fizz
+4
+buzz
+fizz
+\[...\]
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -248,13 +262,21 @@ X
 ---
 ### ft_putstr
 
-#todo
+**Expected files:** ft_putstr.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that displays a string on the standard output.
 
-X
+The pointer passed to the function contains the address of the string's first character.
+
+Your function must be declared as follows:
+
+```
+void    ft_putstr(char *str);
+```
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -265,13 +287,19 @@ X
 ---
 ### ft_strcpy
 
-#todo
+**Expected files:** ft_strcpy.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Reproduce the behavior of the function strcpy (man strcpy).
 
-X
+Your function must be declared as follows:
+
+```
+char    *ft_strcpy(char *s1, char *s2);
+```
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -293,13 +321,19 @@ char	*ft_strcpy(char	*dest, char	*src)
 ---
 ### ft_strlen
 
-#todo
+**Expected files:** ft_strlen.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that returns the length of a string.
 
-X
+Your function must be declared as follows:
+
+```
+int ft_strlen(char *str);
+```
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -310,13 +344,19 @@ X
 ---
 ### ft_swap
 
-#todo
+**Expected files:** ft_swap.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that swaps the contents of two integers the adresses of which are passed as parameters.
 
-X
+Your function must be declared as follows:
+
+```
+void    ft_swap(int *a, int *b);
+```
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -327,13 +367,17 @@ X
 ---
 ### maff_alpha
 
-#todo
+**Expected files:** maff_alpha.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that displays the alphabet, with even letters in uppercase, and odd letters in lowercase, followed by a newline.
 
-X
+Example:
+\$> ./maff_alpha | cat -e
+aBcDeFgHiJkLmNoPqRsTuVwXyZ\$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -344,13 +388,17 @@ X
 ---
 ### maff_revalpha
 
-#todo
+**Expected files:** maff_revalpha.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that displays the alphabet in reverse order, with even letters in uppercase, and odd letters in lowercase, followed by a newline.
 
-X
+Example:
+\$> ./maff_revalpha | cat -e
+zYxWvUtSrQpOnMlKjIhGfEdCbA\$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -363,11 +411,27 @@ X
 
 #todo
 
-**Expected files:** X.c | **Allowed functions:** X
+**Expected files:** repeat_alpha.c | **Allowed functions:** write
 
-X
+Write a program called repeat_alpha that takes a string and display it repeating each alphabetical character as many times as its alphabetical index, followed by a newline.
+
+'a' becomes 'a', 'b' becomes 'bb', 'e' becomes 'eeeee', etc...
+Case remains unchanged.
+If the number of arguments is not 1, just display a newline.
+
+Examples:
+\$>./repeat_alpha "abc"
+abbccc
+\$>./repeat_alpha "Alex." | cat -e
+Alllllllllllleeeeexxxxxxxxxxxxxxxxxxxxxxxx.\$
+\$>./repeat_alpha 'abacadaba 42!' | cat -e
+abbacccaddddabba 42!\$
+\$>./repeat_alpha | cat -e
+\$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -378,13 +442,23 @@ X
 ---
 ### rev_print
 
-#todo
+**Expected files:** rev_print.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string, and displays the string in reverse followed by a newline.
 
-X
+If the number of parameters is not 1, the program displays a newline.
+
+Examples:
+\$> ./rev_print "zaz" | cat -e
+zaz\$
+\$> ./rev_print "dub0 a POIL" | cat -e
+LIOP a 0bud\$
+\$> ./rev_print | cat -e
+\$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -395,13 +469,25 @@ X
 ---
 ### rot_13
 
-#todo
+**Expected files:** rot_13.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string and displays it, replacing each of its letters by the letter 13 spaces ahead in alphabetical order.
 
-X
+'z' becomes 'm' and 'Z' becomes 'M'. Case remains unaffected.
+The output will be followed by a newline.
+If the number of arguments is not 1, the program displays a newline.
+
+Example:
+\$>./rot\_13 "abc"
+nop
+\$>./rot\_13 "My horse is Amazing." | cat -e
+Zl ubefr vf Nznmvat.\$
+\$>./rot\_13 "AkjhZ zLKIJz , 23y " | cat -e
+NxwuM mYXVWm , 23l \$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -412,13 +498,25 @@ X
 ---
 ### rotone
 
-#todo
+**Expected files:** rotone.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string and displays it, replacing each of its letters by the next one in alphabetical order.
 
-X
+'z' becomes 'a' and 'Z' becomes 'A'. Case remains unaffected.
+The output will be followed by a \n.
+If the number of arguments is not 1, the program displays \n.
+
+Example:
+\$>./rotone "abc"
+bcd
+\$>./rotone "Les stagiaires du staff ne sentent pas toujours tres bon." | cat -e
+Mft tubhjbjsft ev tubgg of tfoufou qbt upvkpvst usft cpo.\$
+\$>./rotone "AkjhZ zLKIJz , 23y " | cat -e
+BlkiA aMLJKa , 23z \$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -429,13 +527,29 @@ X
 ---
 ### search_and_replace
 
-#todo
+**Expected files:** search_and_replace.c | **Allowed functions:** write, exit
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program called search_and_replace that takes 3 arguments, the first arguments is a string in which to replace a letter (2nd argument) by another one (3rd argument).
 
-X
+If the number of arguments is not 3, just display a newline.
+
+If the second argument is not contained in the first one (the string) then the program simply rewrites the string followed by a newline.
+
+Examples:
+\$>./search_and_replace "Papache est un sabre" "a" "o"
+Popoche est un sobre
+\$>./search_and_replace "zaz" "art" "zul" | cat -e
+\$
+\$>./search_and_replace "zaz" "r" "u" | cat -e
+zaz\$
+\$>./search_and_replace "jacob" "a" "b" "c" "e" | cat -e
+\$
+\$>./search_and_replace "ZoZ eT Dovid oiME le METol." "o" "a" | cat -e
+ZaZ eT David aiME le METal.\$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -446,13 +560,25 @@ X
 ---
 ### ulstr
 
-#todo
+**Expected files:** ulstr.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string and reverses the case of all its letters.
+Other characters remain unchanged.
 
-X
+You must display the result followed by a '\n'.
+If the number of arguments is not 1, the program displays '\n'.
+
+Examples:
+\$>./ulstr "L'eSPrit nE peUt plUs pRogResSer s'Il staGne et sI peRsIsTent VAnIte et auto-
+justification." | cat -e
+l'EspRIT Ne PEuT PLuS PrOGrESsER S'iL STAgNE ET Si PErSiStENT vaNiTE ET AUTO-
+JUSTIFICATION.\$
+\$>./ulstr | cat -e
+\$
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -474,6 +600,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -490,6 +618,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -508,6 +638,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -524,6 +656,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -542,6 +676,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -558,6 +694,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -576,6 +714,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -592,6 +732,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -610,6 +752,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -626,6 +770,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -644,6 +790,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -660,6 +808,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -678,6 +828,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -694,6 +846,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -712,6 +866,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -728,6 +884,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -746,6 +904,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -762,6 +922,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -780,6 +942,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -797,6 +961,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -813,6 +979,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -834,6 +1002,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -850,6 +1020,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -868,6 +1040,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -884,6 +1058,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -902,6 +1078,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -918,6 +1096,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -936,6 +1116,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -952,6 +1134,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -970,6 +1154,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -986,6 +1172,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -1004,6 +1192,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1020,6 +1210,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -1038,6 +1230,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1055,6 +1249,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1071,6 +1267,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -1092,6 +1290,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1108,6 +1308,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -1126,6 +1328,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1142,6 +1346,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -1160,6 +1366,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1176,6 +1384,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -1194,6 +1404,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1210,6 +1422,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
@@ -1228,6 +1442,8 @@ X
 
 #### Proposed solution
 
+#todo
+
 1. X
 
 ```
@@ -1244,6 +1460,8 @@ X
 X
 
 #### Proposed solution
+
+#todo
 
 1. X
 
