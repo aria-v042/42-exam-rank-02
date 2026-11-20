@@ -1,9 +1,9 @@
 
 /* === aff_first_param ===
  *
- * Write a program that takes strings as arguments, and displays its first
- * argument followed by a newline. If the number of arguments is less than 1,
- * the program displays a newline. */
+ * Write a program that takes strings as arguments, and displays its 
+ * first argument followed by a newline. If the number of arguments is 
+ * less than 1, the program displays a newline. */
 
 #include <unistd.h>
 
