@@ -1,6 +1,6 @@
 # Exam Rank 02 - Preparation Guide
 
-**Compile:** `cc -Wall -Wextra -Werror <name.c> -o name`
+**Compile:** `cc -Wall -Wextra -Werror <name.c> -o name` 
 **Test:** `./name [arguments...]`
 
 ---
@@ -14,14 +14,16 @@
 Write a program that takes a string, and displays the first 'a' character it encounters in it, followed by a newline. If there are no 'a' characters in the string, the program just writes a newline. If the number of parameters is not 1, the program displays a newline.
 
 Example:
-\$> ./aff_a "abc" | cat -e
-a\$
-\$> ./aff_a "dubO a POIL" | cat -e
-a\$
-\$> ./aff_a "zz sent le poney" | cat -e
-\$
-\$> ./aff_a | cat -e
-\$
+```
+$> ./aff_a "abc" | cat -e
+a$
+$> ./aff_a "dubO a POIL" | cat -e
+a$
+$> ./aff_a "zz sent le poney" | cat -e
+$
+$> ./aff_a | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -65,12 +67,14 @@ Write a program that takes strings as arguments, and displays its first argument
 If the number of arguments is less than 1, the program displays a newline.
 
 Examples:
-\$> ./aff_first_param vincent mit "l'ane" dans un pre et "s'en" vint | cat -e
-vincent\$
-\$> ./aff_first_param "j'aime le savon" | cat -e
-j'aime le savon\$
-\$> ./aff_first_param | cat -e
-\$
+```
+$> ./aff_first_param vincent mit "l'ane" dans un pre et "s'en" vint | cat -e
+vincent$
+$> ./aff_first_param "j'aime le savon" | cat -e
+j'aime le savon$
+$> ./aff_first_param | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -109,12 +113,14 @@ Write a program that takes strings as arguments, and displays its last argument 
 If the number of arguments is less than 1, the program displays a newline.
 
 Examples:
-\$> ./aff_last_param "zaz" "mange" "des" "chats" | cat -e
-chats\$
-\$> ./aff_last_param "j'aime le savon" | cat -e
-j'aime le savon\$
-\$> ./aff_last_param | cat -e
-\$
+```
+$> ./aff_last_param "zaz" "mange" "des" "chats" | cat -e
+chats$
+$> ./aff_last_param "j'aime le savon" | cat -e
+j'aime le savon$
+$> ./aff_last_param | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -152,10 +158,12 @@ int main(int argc, char **argv)
 Write a program that takes a string, and displays the character 'z' followed by a newline.
 
 Example:
-\$> ./aff_z "abc" | cat -e
-z\$
-\$> ./aff_z | cat -e
-z\$
+```
+$> ./aff_z "abc" | cat -e
+z$
+$> ./aff_z | cat -e
+z$
+```
 
 #### Proposed solution
 
@@ -182,16 +190,18 @@ A word is a section of string delimited by spaces/tabs or by the start/end of th
 If the number of parameters is not 1, or if there are no words, simply display a newline.
 
 Examples:
-\$> ./first_word "FOR PONY" | cat -e
-FOR\$
-\$> ./first_word "this ... is sparta, then again, maybe not" | cat -e
-this\$
-\$> ./first_word " " | cat -e
-\$
-\$> ./first_word "a" "b" | cat -e
-\$
-\$> ./first_word " lorem,ipsum " | cat -e
-lorem,ipsum\$
+```
+$> ./first_word "FOR PONY" | cat -e
+FOR$
+$> ./first_word "this ... is sparta, then again, maybe not" | cat -e
+this$
+$> ./first_word " " | cat -e
+$
+$> ./first_word "a" "b" | cat -e
+$
+$> ./first_word " lorem,ipsum " | cat -e
+lorem,ipsum$
+```
 
 #### Proposed solution
 
@@ -240,14 +250,16 @@ If the number is a multiple of 5, it prints 'buzz' instead.
 If the number is both a multiple of 3 and a multiple of 5, it prints 'fizzbuzz' instead.
 
 Example:
-\$>./fizzbuzz
+```
+$>./fizzbuzz
 1
 2
 fizz
 4
 buzz
 fizz
-\[...\]
+[...]
+```
 
 #### Proposed solution
 
@@ -372,8 +384,10 @@ X
 Write a program that displays the alphabet, with even letters in uppercase, and odd letters in lowercase, followed by a newline.
 
 Example:
-\$> ./maff_alpha | cat -e
-aBcDeFgHiJkLmNoPqRsTuVwXyZ\$
+```
+$> ./maff_alpha | cat -e
+aBcDeFgHiJkLmNoPqRsTuVwXyZ$
+```
 
 #### Proposed solution
 
@@ -393,8 +407,10 @@ X
 Write a program that displays the alphabet in reverse order, with even letters in uppercase, and odd letters in lowercase, followed by a newline.
 
 Example:
-\$> ./maff_revalpha | cat -e
-zYxWvUtSrQpOnMlKjIhGfEdCbA\$
+```
+$> ./maff_revalpha | cat -e
+zYxWvUtSrQpOnMlKjIhGfEdCbA$
+```
 
 #### Proposed solution
 
@@ -420,14 +436,16 @@ Case remains unchanged.
 If the number of arguments is not 1, just display a newline.
 
 Examples:
-\$>./repeat_alpha "abc"
+```
+$>./repeat_alpha "abc"
 abbccc
-\$>./repeat_alpha "Alex." | cat -e
-Alllllllllllleeeeexxxxxxxxxxxxxxxxxxxxxxxx.\$
-\$>./repeat_alpha 'abacadaba 42!' | cat -e
-abbacccaddddabba 42!\$
-\$>./repeat_alpha | cat -e
-\$
+$>./repeat_alpha "Alex." | cat -e
+Alllllllllllleeeeexxxxxxxxxxxxxxxxxxxxxxxx.$
+$>./repeat_alpha 'abacadaba 42!' | cat -e
+abbacccaddddabba 42!$
+$>./repeat_alpha | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -449,12 +467,14 @@ Write a program that takes a string, and displays the string in reverse followed
 If the number of parameters is not 1, the program displays a newline.
 
 Examples:
-\$> ./rev_print "zaz" | cat -e
-zaz\$
-\$> ./rev_print "dub0 a POIL" | cat -e
-LIOP a 0bud\$
-\$> ./rev_print | cat -e
-\$
+```
+$> ./rev_print "zaz" | cat -e
+zaz$
+$> ./rev_print "dub0 a POIL" | cat -e
+LIOP a 0bud$
+$> ./rev_print | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -478,12 +498,14 @@ The output will be followed by a newline.
 If the number of arguments is not 1, the program displays a newline.
 
 Example:
-\$>./rot\_13 "abc"
+```
+$>./rot_13 "abc"
 nop
-\$>./rot\_13 "My horse is Amazing." | cat -e
-Zl ubefr vf Nznmvat.\$
-\$>./rot\_13 "AkjhZ zLKIJz , 23y " | cat -e
-NxwuM mYXVWm , 23l \$
+$>./rot_13 "My horse is Amazing." | cat -e
+Zl ubefr vf Nznmvat.$
+$>./rot_13 "AkjhZ zLKIJz , 23y " | cat -e
+NxwuM mYXVWm , 23l $
+```
 
 #### Proposed solution
 
@@ -507,12 +529,14 @@ The output will be followed by a \n.
 If the number of arguments is not 1, the program displays \n.
 
 Example:
-\$>./rotone "abc"
+```
+$>./rotone "abc"
 bcd
-\$>./rotone "Les stagiaires du staff ne sentent pas toujours tres bon." | cat -e
-Mft tubhjbjsft ev tubgg of tfoufou qbt upvkpvst usft cpo.\$
-\$>./rotone "AkjhZ zLKIJz , 23y " | cat -e
-BlkiA aMLJKa , 23z \$
+$>./rotone "Les stagiaires du staff ne sentent pas toujours tres bon." | cat -e
+Mft tubhjbjsft ev tubgg of tfoufou qbt upvkpvst usft cpo.$
+$>./rotone "AkjhZ zLKIJz , 23y " | cat -e
+BlkiA aMLJKa , 23z $
+```
 
 #### Proposed solution
 
@@ -536,16 +560,18 @@ If the number of arguments is not 3, just display a newline.
 If the second argument is not contained in the first one (the string) then the program simply rewrites the string followed by a newline.
 
 Examples:
-\$>./search_and_replace "Papache est un sabre" "a" "o"
+```
+$>./search_and_replace "Papache est un sabre" "a" "o"
 Popoche est un sobre
-\$>./search_and_replace "zaz" "art" "zul" | cat -e
-\$
-\$>./search_and_replace "zaz" "r" "u" | cat -e
-zaz\$
-\$>./search_and_replace "jacob" "a" "b" "c" "e" | cat -e
-\$
-\$>./search_and_replace "ZoZ eT Dovid oiME le METol." "o" "a" | cat -e
-ZaZ eT David aiME le METal.\$
+$>./search_and_replace "zaz" "art" "zul" | cat -e
+$
+$>./search_and_replace "zaz" "r" "u" | cat -e
+zaz$
+$>./search_and_replace "jacob" "a" "b" "c" "e" | cat -e
+$
+$>./search_and_replace "ZoZ eT Dovid oiME le METol." "o" "a" | cat -e
+ZaZ eT David aiME le METal.$
+```
 
 #### Proposed solution
 
@@ -569,12 +595,14 @@ You must display the result followed by a '\n'.
 If the number of arguments is not 1, the program displays '\n'.
 
 Examples:
-\$>./ulstr "L'eSPrit nE peUt plUs pRogResSer s'Il staGne et sI peRsIsTent VAnIte et auto-
+```
+$>./ulstr "L'eSPrit nE peUt plUs pRogResSer s'Il staGne et sI peRsIsTent VAnIte et auto-
 justification." | cat -e
 l'EspRIT Ne PEuT PLuS PrOGrESsER S'iL STAgNE ET Si PErSiStENT vaNiTE ET AUTO-
-JUSTIFICATION.\$
-\$>./ulstr | cat -e
-\$
+JUSTIFICATION.$
+$>./ulstr | cat -e
+$
+```
 
 #### Proposed solution
 
