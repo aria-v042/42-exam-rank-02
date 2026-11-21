@@ -3,17 +3,6 @@
 **Compile:** `cc -Wall -Wextra -Werror <name.c> -o name` 
 **Test:** `./name [arguments...]`
 
-### Index
-
-- [Level 0](#Level-0)
-    - [aff_a](#aff_a), [aff_first_param](#aff_first_param), [aff_last_param](#aff_last_param), [aff_z](#aff_z), [first_word](#first_word), [fizzbuzz](#fizzbuzz), [ft_putstr](#ft_putstr), [ft_strcpy](#ft_strcpy), [ft_strlen](#ft_strlen), [ft_swap](#ft_swap), [maff_alpha](#maff_alpha), [maff_revalpha](#maff_revalpha), [repeat_alpha](#repeat_alpha), [rev_print](#rev_print), [rot_13](#rot_13), [rotone](#rotone), [search_and_replace](#search_and_replace), [ulstr](#ulstr) 
-- [Level 1](#Level1)
-    - [alpha_mirror](#alpha_mirror), [camel_to_snake](#camel_to_snake), [do_op](#do_op), [ft_atoi](#ft_atoi), [ft_strchr](#ft_strchr), [ft_strcmp](#ft_strcmp), [ft_strcspn](#ft_strcspn), [ft_strdup](#ft_strdup), [ft_strpbrk](#ft_strpbrk), [ft_strrev](#ft_strrev), [ft_strspn](#ft_strspn), [inter](#inter), [is_power_of_2](#is_power_of_2), [last_word](#last_word), [max](#max), [print_bits](#print_bits), [reverse_bits](#reverse_bits), [snake_to_camel](#snake_to_camel), [swap_bits](#swap_bits), [union](#union), [wdmatch](#wdmatch) 
-- [Level 2](#Level2)
-    - [add_prime_sum](#add_prime_sum), [epur_str](#epur_str), [expand_str](#expand_str), [ft_atoi_base](#ft_atoi_base), [ft_list_size](#ft_list_size), [ft_range](#ft_range), [ft_rrange](#ft_rrange), [hidenp](#hidenp), [lcm](#lcm), [paramsum](#paramsum), [pgcd](#pgcd), [print_hex](#print_hex), [rstr_capitalizer](#rstr_capitalizer), [str_capitalizer](#str_capitalizer), [tab_mult](#tab_mult) 
-- [Level 3](#Level3)
-    - [flood_fill](#flood_fill), [fprime](#fprime), [ft_itoa](#ft_itoa), [ft_list_foreach](#ft_list_foreach), [ft_list_remove_if](#ft_list_remove_if), [ft_split](#ft_split), [rev_wstr](#rev_wstr), [rostring](#rostring), [sort_int_tab](#sort_int_tab), [sort_list](#sort_list) 
-
 ---
 ## Level 0
 
@@ -631,11 +620,25 @@ X
 ---
 ### alpha_mirror
 
-#todo
+**Expected files:** alpha_mirror.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program called alpha_mirror that takes a string and displays this string after replacing each alphabetical character by the opposite alphabetical character, followed by a newline.
 
-X
+'a' becomes 'z', 'Z' becomes 'A'
+'d' becomes 'w', 'M' becomes 'N'
+
+Case is not changed.
+If the number of arguments is not 1, display only a newline.
+
+Examples:
+```
+$>./alpha_mirror "abc"
+zyx
+$>./alpha_mirror "My horse is Amazing." | cat -e
+Nb slihv rh Znzarmt.$
+$>./alpha_mirror | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -650,11 +653,23 @@ X
 ---
 ### camel_to_snake
 
-#todo
+**Expected files:** camel_to_snake.c | **Allowed functions:** malloc, free, realloc, write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a single string in lowerCamelCase format and converts it into a string in snake_case format.
 
-X
+A lowerCamelCase string is a string where each word begins with a capital letter except for the first one.
+
+A snake_case string is a string where each word is in lower case, separated by an underscore "_".
+
+Examples:
+```
+$>./camel_to_snake "hereIsACamelCaseWord"
+here_is_a_camel_case_word
+$>./camel_to_snake "helloWorld" | cat -e
+hello_world$
+$>./camel_to_snake | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -669,11 +684,25 @@ X
 ---
 ### do_op
 
-#todo
+**Expected files:** do_op.c | **Allowed functions:** atoi, printf, write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes three strings:
+\- The first and the third one are representations of base-10 signed integers that fit in an int.
+\- The second one is an arithmetic operator chosen from: + - * / %
 
-X
+The program must display the result of the requested arithmetic operation, followed by a newline. If the number of parameters is not 3, the program just displays a newline.
+
+Examples:
+```
+$> ./do_op "123" "*" 456 | cat -e
+56088$
+$> ./do_op "9828" "/" 234 | cat -e
+42$
+$> ./do_op "1" "+" "-43" | cat -e
+-42$
+$> ./do_op | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -688,11 +717,16 @@ X
 ---
 ### ft_atoi
 
-#todo
+**Expected files:** ft_atoi.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that converts the string argument str to an integer (type int) and returns it.
 
-X
+It works much like the standard atoi(const char \*str) function, see the man.
+
+Your function must be declared as follows:
+```
+int ft_atoi(const char *str);
+```
 
 #### Proposed solution
 
@@ -707,11 +741,14 @@ X
 ---
 ### ft_strchr
 
-#todo
+**Expected files:** ft_strchr.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Reproduce the behavior of the function strchr (man strchr).
 
-X
+The function must be declared as follows:
+```
+char    *ft_strchr(const char *s, int c);
+```
 
 #### Proposed solution
 
@@ -726,11 +763,14 @@ X
 ---
 ### ft_strcmp
 
-#todo
+**Expected files:** ft_strcmp.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Reproduce the behavior of the function strcmp (man strcmp).
 
-X
+Your function must be declared as follows:
+```
+int ft_strcmp(char *s1, char *s2);
+```
 
 #### Proposed solution
 
@@ -745,11 +785,14 @@ X
 ---
 ### ft_strcspn
 
-#todo
+**Expected files:** ft_strcspn.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Reproduce exactly the behavior of the function strcspn (man strcspn).
 
-X
+The function should be prototyped as follows:
+```
+size_t  ft_strcspn(const char *s, const char *reject);
+```
 
 #### Proposed solution
 
@@ -764,11 +807,14 @@ X
 ---
 ### ft_strdup
 
-#todo
+**Expected files:** ft_strdup.c | **Allowed functions:** malloc
 
-**Expected files:** X.c | **Allowed functions:** X
+Reproduce the behavior of the function strdup (man strdup).
 
-X
+Your function must be declared as follows:
+```
+char    *ft_strdup(char *src);
+```
 
 #### Proposed solution
 
@@ -783,11 +829,14 @@ X
 ---
 ### ft_strpbrk
 
-#todo
+**Expected files:** ft_strpbrk.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Reproduce the behavior of the function strpbrk (man strpbrk).
 
-X
+The function must be declared as follows:
+```
+char    *ft_strpbrk(const char *s1, const char *s2);
+```
 
 #### Proposed solution
 
@@ -802,11 +851,16 @@ X
 ---
 ### ft_strrev
 
-#todo
+**Expected files:** ft_strrev.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that reverses (in-place) a string.
 
-X
+It must return its parameter.
+
+Your function must be declared as follows:
+```
+char    *ft_strrev(char *str);
+```
 
 #### Proposed solution
 
@@ -821,11 +875,14 @@ X
 ---
 ### ft_strspn
 
-#todo
+**Expected files:** ft_strspn.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Reproduce the behavior of the function strspn (man strspn).
 
-X
+The function must be declared as follows:
+```
+size_t  ft_strspn(const char *s, const char *accept);
+```
 
 #### Proposed solution
 
@@ -840,11 +897,24 @@ X
 ---
 ### inter
 
-#todo
+**Expected files:** inter.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes two strings and displays, without doubles, the characters that appear in both strings, in the order they appear in the first one.
 
-X
+The display will be followed by a \n.
+If the number of arguments is not 2, the program displays \n.
+
+Examples:
+```
+$>./inter "padinton" "paqefwtdjetyiytjneytjoeyjnejeyj" | cat -e
+padinto$
+$>./inter ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
+df6ewg4$
+$>./inter "rien" "cette phrase ne cache rien" | cat -e
+rien$
+$>./inter | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -859,11 +929,16 @@ X
 ---
 ### is_power_of_2
 
-#todo
+**Expected files:** is_power_of_2.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that determines if a given number is a power of 2.
 
-X
+This function returns 1 if the given number is a power of 2, otherwise it returns 0.
+
+Your function must be declared as follows:
+```
+int is_power_of_2(unsigned int n);
+```
 
 #### Proposed solution
 
@@ -878,11 +953,27 @@ X
 ---
 ### last_word
 
-#todo
+**Expected files:** last_word.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string and displays its last word followed by a \n.
 
-X
+A word is a section of string delimited by spaces/tabs or by the start/end of the string.
+
+If the number of parameters is not 1, or there are no words, display a newline.
+
+Example:
+```
+$> ./last_word "FOR PONY" | cat -e
+PONY$
+$> ./last_word "this ... is sparta, then again, maybe not" | cat -e
+not$
+$> ./last_word " " | cat -e
+$
+$> ./last_word "a" "b" | cat -e
+$
+$> ./last_word " lorem,ipsum " | cat -e
+lorem,ipsum$
+```
 
 #### Proposed solution
 
@@ -897,11 +988,17 @@ X
 ---
 ### max
 
-#todo
+**Expected files:** max.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write the following function:
+```
+int max(int* tab, unsigned int len);
+```
 
-X
+The first parameter is an array of int, the second is the number of elements in the array.
+
+The function returns the largest number found in the array.
+If the array is empty, the function returns 0.
 
 #### Proposed solution
 
@@ -916,11 +1013,16 @@ X
 ---
 ### print_bits
 
-#todo
+**Expected files:** print_bits.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that takes a byte, and prints it in binary WITHOUT A NEWLINE AT THE END.
 
-X
+Your function must be declared as follows:
+```
+void    print_bits(unsigned char octet);
+```
+
+Example, if you pass 2 to print_bits, it will print "00000010"
 
 #### Proposed solution
 
@@ -935,11 +1037,24 @@ X
 ---
 ### reverse_bits
 
-#todo
+**Expected files:** reverse_bits.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that takes a byte, reverses it, bit by bit (like the example) and returns the result.
 
-X
+Your function must be declared as follows:
+```
+unsigned char   reverse_bits(unsigned char octet);
+```
+
+Example:
+```
+   1 byte
+_____________
+  0010 0110
+     ||
+     \/
+  0110 0100
+```
 
 #### Proposed solution
 
