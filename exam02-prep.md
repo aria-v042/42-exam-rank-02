@@ -1423,7 +1423,6 @@ X
 ---
 ### hidenp
 
-#todo
 ```
 Expected files   : hidenp.c
 Allowed functions: write
@@ -1463,9 +1462,8 @@ X
 ---
 ### lcm
 
-#todo
 ```
-Expected files   : lcm
+Expected files   : lcm.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
@@ -1495,12 +1493,23 @@ X
 ---
 ### paramsum
 
-#todo
 ```
-Expected files   :
-Allowed functions:
+Expected files   : parasum.c
+Allowed functions: write
 --------------------------------------------------------------------------------
 
+Write a program that displays the number of arguments passed to it, followed
+by a newline.
+
+If there are no arguments, just display a 0 followed by a newline.
+
+Example:
+$>./paramsum 1 2 3 5 7 24
+6
+$>./paramsum 6 12 24 | cat -e
+3$
+$>./paramsum | cat -e
+0$
 ```
 
 #### Proposed solution
@@ -1516,12 +1525,29 @@ X
 ---
 ### pgcd
 
-#todo
 ```
-Expected files   :
-Allowed functions:
+Expected files   : pgcd.c
+Allowed functions: printf, atoi, malloc, free
 --------------------------------------------------------------------------------
 
+Write a program that takes two strings representing two strictly positive
+integers that fit in an int.
+
+Display their highest common denominator followed by a newline.
+
+If the number of parameters is not 2, display a newline.
+
+Examples:
+$> ./pgcd 42 10 | cat -e
+2$
+$> ./pgcd 42 12 | cat -e
+6$
+$> ./pgcd 14 77 | cat -e
+7$
+$> ./pgcd 17 3 | cat -e
+1$
+$> ./pgcd | cat -e
+$
 ```
 
 #### Proposed solution
@@ -1537,12 +1563,25 @@ X
 ---
 ### print_hex
 
-#todo
 ```
-Expected files   :
-Allowed functions:
+Expected files   : print_hex.c
+Allowed functions: write
 --------------------------------------------------------------------------------
 
+Write a program that takes a positive (or zero) number expressed in base 10,
+and displays it in base 16 (lowercase letters) followed by a newline.
+
+If the number of parameters is not 1, the program displays a newline.
+
+Examples:
+$> ./print_hex "10" | cat -e
+a$
+$> ./print_hex "255" | cat -e
+ff$
+$> ./print_hex "5156454" | cat -e
+4eae66$
+$> ./print_hex | cat -e
+$
 ```
 
 #### Proposed solution
@@ -1558,12 +1597,29 @@ X
 ---
 ### rstr_capitalizer
 
-#todo
 ```
-Expected files   :
-Allowed functions:
+Expected files   : rstr_capitalizer.c
+Allowed functions: write
 --------------------------------------------------------------------------------
 
+Write a program that takes one or more strings and, for each argument, puts
+the last character that is a letter of each word in uppercase and the rest
+in lowercase, then displays the result followed by a \n.
+
+A word is a section of string delimited by spaces/tabs or the start/end of
+the string.
+
+If there are no parameters, display \n.
+
+Examples:
+$> ./rstr_capitalizer | cat -e
+$
+$> ./rstr_capitalizer "a FiRSt LiTTlE TESt" | cat -e
+A firsT littlE tesT$
+$> ./rstr_capitalizer "SecONd teST A LITtle BiT   Moar comPLEX" "   But... This iS not THAT COMPLEX" "     Okay, this is the last 1239809147801 but not    the least    t" | cat -e
+seconD tesT A littlE biT   moaR compleX$
+   but... thiS iS noT thaT compleX$
+     okay, thiS iS thE lasT 1239809147801 buT noT    thE leasT    T$
 ```
 
 #### Proposed solution
@@ -1579,12 +1635,30 @@ X
 ---
 ### str_capitalizer
 
-#todo
 ```
-Expected files   :
-Allowed functions:
+Expected files   : str_capitalizer.c
+Allowed functions: write
 --------------------------------------------------------------------------------
 
+Write a program that takes one or several strings and, for each argument,
+capitalizes the first character of each word (if it's a letter), puts the
+rest in lowercase, and displays the result on the standard output, followed
+by a \n.
+
+A "word" is defined as a part of a string delimited either by spaces/tabs, or
+by the start/end of the string.
+
+If there are no arguments, the program must display \n.
+
+Example:
+$> ./str_capitalizer | cat -e
+$
+$> ./str_capitalizer "a FiRSt LiTTlE TESt" | cat -e
+A First Little Test$
+$> ./str_capitalizer "__SecONd teST A LITtle BiT   Moar comPLEX" "   But... This iS not THAT COMPLEX" "     Okay, this is the last 1239809147801 but not    the least    t" | cat -e
+__second Test A Little Bit   Moar Complex$
+   But... This Is Not That Complex$
+     Okay, This Is The Last 1239809147801 But Not    The Least    T$
 ```
 
 #### Proposed solution
@@ -1600,12 +1674,41 @@ X
 ---
 ### tab_mult
 
-#todo
 ```
-Expected files   :
-Allowed functions:
+Expected files   : tab_mult.c
+Allowed functions: write
 --------------------------------------------------------------------------------
 
+Write a program that displays a number's multiplication table.
+
+The parameter will always be a strictly positive number that fits in an int,
+and said number times 9 will also fit in an int.
+
+If there are no parameters, the program displays \n.
+
+Examples:
+$>./tab_mult 9
+1 x 9 = 9
+2 x 9 = 18
+3 x 9 = 27
+4 x 9 = 36
+5 x 9 = 45
+6 x 9 = 54
+7 x 9 = 63
+8 x 9 = 72
+9 x 9 = 81
+$>./tab_mult 19
+1 x 19 = 19
+2 x 19 = 38
+3 x 19 = 57
+4 x 19 = 76
+5 x 19 = 95
+6 x 19 = 114
+7 x 19 = 133
+8 x 19 = 152
+9 x 19 = 171
+$>./tab_mult | cat -e
+$
 ```
 
 #### Proposed solution
@@ -1626,10 +1729,46 @@ X
 
 #todo
 ```
-Expected files   :
+Expected files   : flood_fill.c
 Allowed functions:
 --------------------------------------------------------------------------------
 
+Write a function that takes a char** as a 2-dimensional array of char, a
+t_point as the dimensions of this array and a t_point as the starting point.
+
+Starting from the given 'begin' t_point, this function fills an entire zone
+by replacing characters inside with the character 'F'. A zone is a group of
+the same character delimited horizontally and vertically by other characters
+or the array boundary.
+
+The flood_fill function won't fill diagonally.
+
+The flood_fill function will be prototyped like this:
+void    flood_fill(char **tab, t_point size, t_point begin);
+
+The t_point structure is prototyped like this:
+typedef struct  s_point
+{
+    int x;
+    int y;
+}   t_point;
+
+Example:
+t_point size = {8, 5};
+char *zone[] = {
+    "11111111",
+    "10001001",
+    "10010001",
+    "10110001",
+    "11100001",
+};
+t_point begin = {7, 4};
+// After flood_fill:
+FFFFFFFF
+F000F00F
+F00F000F
+F0FF000F
+FFF0000F
 ```
 
 #### Proposed solution
