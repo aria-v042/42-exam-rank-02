@@ -9,24 +9,24 @@
 
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
 	int	i = 0;
 
-	if (argc != 2)	// If not 1 param
+	if (ac != 2)	// If not 1 param
 	{
 		write(1, "\n", 1);
 		return (0);
 	}
 	// Skip leading spaces/tabs - reach 1st word or end of string
-	while (argv[1][i] == ' ' || argv[1][i] == '\t')
+	while (av[1][i] == ' ' || av[1][i] == '\t')
 	{
 		i++;
 	}
 	// Write each character until a space/tab or end of string
-	while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
+	while (av[1][i] && av[1][i] != ' ' && av[1][i] != '\t')
 	{
-		write(1, &argv[1][i], 1);
+		write(1, &av[1][i], 1);
 		i++;
 	}
 	write(1, "\n", 1);	// Always write a newline at the end
