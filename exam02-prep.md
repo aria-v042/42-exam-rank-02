@@ -425,8 +425,6 @@ X
 ---
 ### repeat_alpha
 
-#todo
-
 **Expected files:** repeat_alpha.c | **Allowed functions:** write
 
 Write a program called repeat_alpha that takes a string and display it repeating each alphabetical character as many times as its alphabetical index, followed by a newline.
@@ -1069,11 +1067,23 @@ X
 ---
 ### snake_to_camel
 
-#todo
+**Expected files:** snake_to_camel.c | **Allowed functions:** malloc, free, realloc, write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a single string in snake_case format and converts it into a string in lowerCamelCase format.
 
-X
+A snake_case string is a string where each word is in lower case, separated by an underscore "_".
+
+A lowerCamelCase string is a string where each word begins with a capital letter except for the first one.
+
+Examples:
+```
+$>./snake_to_camel "here_is_a_snake_case_word"
+hereIsASnakeCaseWord
+$>./snake_to_camel "hello_world" | cat -e
+helloWorld$
+$>./snake_to_camel | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -1088,11 +1098,24 @@ X
 ---
 ### swap_bits
 
-#todo
+**Expected files:** swap_bits.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that takes a byte, swaps its halves (like the example) and returns the result.
 
-X
+Your function must be declared as follows:
+```
+unsigned char   swap_bits(unsigned char octet);
+```
+
+Example:
+```
+  1 byte
+_____________
+ 0100 | 0001
+     \ /
+     / \
+ 0001 | 0100
+```
 
 #### Proposed solution
 
@@ -1107,11 +1130,24 @@ X
 ---
 ### union
 
-#todo
+**Expected files:** union.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes two strings and displays, without doubles, the characters that appear in either one of the strings.
 
-X
+The display will be in the order characters appear in the command line, and will be followed by a \n.
+If the number of arguments is not 2, the program displays \n.
+
+Example:
+```
+$>./union zpadinton "paqefwtdjetyiytjneytjoeyjnejeyj" | cat -e
+zpadintoqefwjy$
+$>./union ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
+df6vewg4thras$
+$>./union "rien" "cette phrase ne cache rien" | cat -e
+rienct phas$
+$>./union | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -1126,11 +1162,24 @@ X
 ---
 ### wdmatch
 
-#todo
+**Expected files:** wdmatch.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes two strings and checks whether it's possible to write the first string with characters from the second string, while respecting the order in which these characters appear in the second string.
 
-X
+If it's possible, the program displays the string, followed by a \n, otherwise it simply displays a \n.
+If the number of arguments is not 2, the program displays a \n.
+
+Examples:
+```
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
+faya$
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
+$
+$>./wdmatch "quarante deux" "qfqfsudf arzgsayns tsregfdgs sjytdekuoixq " | cat -e
+quarante deux$
+$>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -1148,11 +1197,21 @@ X
 ---
 ### add_prime_sum
 
-#todo
+**Expected files:** add_prime_sum.c | **Allowed functions:** write, exit
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a positive integer as argument and displays the sum of all prime numbers inferior or equal to it followed by a newline.
 
-X
+If the number of arguments is not 1, or the argument is not a positive number, just display 0 followed by a newline.
+
+Examples:
+```
+$>./add_prime_sum 5
+10
+$>./add_prime_sum 7 | cat -e
+17$
+$>./add_prime_sum | cat -e
+0$
+```
 
 #### Proposed solution
 
@@ -1167,11 +1226,25 @@ X
 ---
 ### epur_str
 
-#todo
+**Expected files:** epur_str.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string, and displays this string with exactly one space between words, with no spaces or tabs either at the beginning or the end, followed by a \n.
 
-X
+A "word" is defined as a part of a string delimited either by spaces/tabs, or by the start/end of the string.
+
+If the number of arguments is not 1, or if there are no words to display, the program displays \n.
+
+Example:
+```
+$> ./epur_str "See? It's easy to print the same thing" | cat -e
+See? It's easy to print the same thing$
+$> ./epur_str " this        time it      will     be    more complex  . " | cat -e
+this time it will be more complex .$
+$> ./epur_str "No S* Sherlock..." "nAw S* ShErLaWQ..." | cat -e
+$
+$> ./epur_str "" | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -1186,11 +1259,25 @@ X
 ---
 ### expand_str
 
-#todo
+**Expected files:** expand_str.c | **Allowed functions:** write
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program that takes a string and displays it with exactly three spaces between each word, with no spaces or tabs either at the beginning or the end, followed by a newline.
 
-X
+A word is a section of string delimited either by spaces/tabs, or by the start/end of the string.
+
+If the number of parameters is not 1, or if there are no words, simply display a newline.
+
+Examples:
+```
+$> ./expand_str "See? It's easy to print the same thing" | cat -e
+See?   It's   easy   to   print   the   same   thing$
+$> ./expand_str " this        time it      will     be    more complex  " | cat -e
+this   time   it   will   be   more   complex$
+$> ./expand_str "No S* Sherlock..." "nAw S* ShErLaWQ..." | cat -e
+$
+$> ./expand_str "" | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -1205,11 +1292,21 @@ X
 ---
 ### ft_atoi_base
 
-#todo
+**Expected files:** ft_atoi_base.c | **Allowed functions:** none
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that converts the string argument str (base N <= 16) to an integer (base 10) and returns it.
 
-X
+The characters recognized in the input are: 0123456789abcdef
+Those are, of course, to be trimmed according to the requested base.
+
+Uppercase letters must also be recognized: "12fdb3" is the same as "12FDB3".
+
+Minus signs ('-') are interpreted only if they are the first character of the string.
+
+Your function must be declared as follows:
+```
+int ft_atoi_base(const char *str, int str_base);
+```
 
 #### Proposed solution
 
@@ -1224,11 +1321,26 @@ X
 ---
 ### ft_list_size
 
-#todo
+```
+Expected files   : ft_list_size.c
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function that returns the number of elements in the linked list that's
+passed to it.
 
-X
+It must be declared as follows:
+
+int ft_list_size(t_list *begin_list);
+
+You must use the following structure in your program ft_list_size.c:
+
+typedef struct  s_list
+{
+    struct s_list *next;
+    void *data;
+}   t_list;
+```
 
 #### Proposed solution
 
@@ -1243,11 +1355,27 @@ X
 ---
 ### ft_range
 
-#todo
+**Expected files:** ft_range.c | **Allowed functions:** malloc
 
-**Expected files:** X.c | **Allowed functions:** X
+```
+Expected files   : ft_range.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
 
-X
+Write the following function:
+
+int *ft_range(int start, int end);
+
+It must allocate (with malloc()) an array of integers, fill it with consecutive
+values that begin at start and end at end (Including start and end !), then
+return a pointer to the first value of the array.
+
+Examples:
+- With (1, 3) you will return an array containing 1, 2 and 3.
+- With (-1, 2) you will return an array containing -1, 0, 1 and 2.
+- With (0, 0) you will return an array containing 0.
+- With (0, -3) you will return an array containing 0, -1, -2 and -3..
+```
 
 #### Proposed solution
 
@@ -1262,11 +1390,25 @@ X
 ---
 ### ft_rrange
 
-#todo
+```
+Expected files   : ft_rrange.c
+Allowed functions: malloc
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
+Write the following function:
 
-X
+int *ft_rrange(int start, int end);
+
+It must allocate (with malloc()) an array of integers, fill it with consecutive
+values that begin at end and end at start (Including start and end !), then
+return a pointer to the first value of the array.
+
+Examples:
+- With (1, 3) you will return an array containing 3, 2 and 1.
+- With (-1, 2) you will return an array containing 2, 1, 0 and -1.
+- With (0, 0) you will return an array containing 0.
+- With (0, -3) you will return an array containing -3, -2, -1 and 0.
+```
 
 #### Proposed solution
 
@@ -1282,10 +1424,31 @@ X
 ### hidenp
 
 #todo
+```
+Expected files   : hidenp.c
+Allowed functions: write
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a program named hidenp that takes two strings and displays 1
+followed by a newline if the first string is hidden in the second one,
+otherwise displays 0 followed by a newline.
 
-X
+Let s1 and s2 be strings. We say that s1 is hidden in s2 if it's possible to
+find each character from s1 in s2, in the same order as they appear in s1.
+Also, the empty string is hidden in any string.
+
+If the number of parameters is not 2, the program displays a newline.
+
+Examples:
+$>./hidenp "fgex.;" "tyf34gdgf;'ektufjhgdgex.;.;rtjynur6" | cat -e
+1$
+$>./hidenp "abc" "2altrb53c.sse" | cat -e
+1$
+$>./hidenp "abc" "btarc" | cat -e
+0$
+$>./hidenp | cat -e
+$
+```
 
 #### Proposed solution
 
@@ -1301,10 +1464,23 @@ X
 ### lcm
 
 #todo
+```
+Expected files   : lcm
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
+Write a function who takes two unsigned int as parameters and returns the
+computed LCM of those parameters.
 
-X
+LCM (Lowest Common Multiple) of two non-zero integers is the smallest positive
+integer divisible by both integers.
+
+If at least one integer is null, LCM is equal to 0.
+
+Your function must be prototyped as follows:
+
+unsigned int    lcm(unsigned int a, unsigned int b);
+```
 
 #### Proposed solution
 
@@ -1320,10 +1496,12 @@ X
 ### paramsum
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1339,10 +1517,12 @@ X
 ### pgcd
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1358,10 +1538,12 @@ X
 ### print_hex
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1377,10 +1559,12 @@ X
 ### rstr_capitalizer
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1396,10 +1580,12 @@ X
 ### str_capitalizer
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1415,10 +1601,12 @@ X
 ### tab_mult
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1437,10 +1625,12 @@ X
 ### flood_fill
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1456,10 +1646,12 @@ X
 ### fprime
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1475,10 +1667,12 @@ X
 ### ft_itoa
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1494,10 +1688,12 @@ X
 ### ft_list_foreach
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1513,10 +1709,12 @@ X
 ### ft_list_remove_if
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1532,10 +1730,12 @@ X
 ### ft_split
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1551,10 +1751,12 @@ X
 ### rev_wstr
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1570,10 +1772,12 @@ X
 ### rostring
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1589,10 +1793,12 @@ X
 ### sort_int_tab
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
@@ -1608,10 +1814,12 @@ X
 ### sort_list
 
 #todo
+```
+Expected files   :
+Allowed functions:
+--------------------------------------------------------------------------------
 
-**Expected files:** X.c | **Allowed functions:** X
-
-X
+```
 
 #### Proposed solution
 
